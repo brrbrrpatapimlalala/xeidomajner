@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import random;
+import os;
+with open("wallet.txt", "w") as f:
+    print();
+while True:
+    rand = random.uniform(0,10000000);
+    hc = hex(int(rand));
+    print(rand,"| ",f"\033[32m{hc}\033[0m");
+    with open("wallet.txt", "a") as f:
+        print((hc), file=f);
+    print(os.path.getsize("wallet.txt"));
+    print("\033[33m=========================\033[0m");
